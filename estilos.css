@@ -384,6 +384,80 @@ mark { background: rgba(166, 90, 46, .22); color: inherit; padding: 0 2px; }
 }
 .puerta .acceso a:hover { text-decoration: underline; }
 
+/* ---- 11 quater. Los bloques visuales de la entrada --------------------- */
+
+/* La línea de tiempo. No dibuja "intensidad" de protesta porque el informe
+   no tiene un conteo diario: marca los nueve momentos y deja que se vea
+   solo lo que sí es un dato — el hueco de tres semanas antes del fallo. */
+.linea-tiempo {
+  margin: 40px 0 46px; max-width: 46em;
+  padding: 22px 24px 20px;
+  background: var(--papel-alto); border: 1px solid var(--linea);
+}
+.linea-tiempo .rotulo,
+.victimas .rotulo {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--cobre); margin-bottom: 16px;
+}
+.linea-tiempo svg { width: 100%; height: auto; display: block; }
+.linea-tiempo .hitos {
+  list-style: none; margin: 18px 0 0; padding: 0;
+  columns: 2; column-gap: 32px;
+}
+@media (max-width: 640px) { .linea-tiempo .hitos { columns: 1; } }
+.linea-tiempo .hitos li {
+  break-inside: avoid; margin-bottom: 9px;
+  font-size: 16px; line-height: 1.4; color: var(--tinta-suave);
+}
+.linea-tiempo .hitos b {
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+  color: var(--cobre); display: block;
+}
+.linea-tiempo figcaption {
+  margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--linea);
+  font-family: var(--serif); font-style: italic; font-size: 16px;
+  color: var(--tinta-suave); text-transform: none; letter-spacing: 0;
+}
+
+/* El mapa: se le permite salir de la columna de texto, como en el informe */
+.mapa { margin: 40px 0; max-width: 46em; }
+.mapa img { border: 1px solid var(--linea); background: #fff; }
+.mapa figcaption {
+  font-family: var(--serif); font-size: 16px; line-height: 1.5;
+  font-style: italic; color: var(--tinta-suave);
+  margin-top: 12px; text-transform: none; letter-spacing: 0;
+  border: none; padding: 0;
+}
+.mapa .credito {
+  display: block; margin-top: 6px; font-style: normal;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--tinta-tenue);
+}
+
+/* Las cinco muertes. Sin dramatismo: nombre, fecha, lugar y qué pasó.
+   La sobriedad tipográfica es lo que hace que se lean como personas. */
+.victimas {
+  margin: 40px 0 46px; max-width: 40em;
+  padding: 24px 26px 20px;
+  border-left: 2px solid var(--cobre); background: var(--papel-alto);
+}
+.victimas ul { list-style: none; margin: 0; padding: 0; }
+.victimas li {
+  padding: 14px 0; border-top: 1px solid var(--linea);
+}
+.victimas li:first-child { border-top: none; padding-top: 0; }
+.victimas b {
+  display: block; font-size: 20px; font-weight: 600; color: var(--tinta);
+  line-height: 1.25;
+}
+.victimas .donde {
+  display: block; font-family: var(--mono); font-size: 11.5px;
+  letter-spacing: .04em; color: var(--cobre); margin: 4px 0 6px;
+}
+.victimas .como {
+  display: block; font-size: 16.5px; line-height: 1.5; color: var(--tinta-suave);
+}
+
 /* ---- 11 ter. Índice de preguntas y listas reales ----------------------- */
 
 /* El índice que abre las secciones 1 y 3: diecinueve preguntas son muchas

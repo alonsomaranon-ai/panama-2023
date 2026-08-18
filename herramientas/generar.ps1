@@ -8,6 +8,10 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# direccion publica del sitio: las etiquetas para compartir necesitan
+# direcciones absolutas, no relativas
+$base = "https://alonsomaranon-ai.github.io/panama-2023/"
+
 # ---------- lectura ----------
 $crudo = Get-Content -Path $Intermedio -Encoding UTF8
 $items = New-Object System.Collections.ArrayList
@@ -278,6 +282,13 @@ function Pagina($archivo, $titulo, $descripcion, $ficha, $h1, $bajada, $cuerpo, 
   <meta property="og:title" content="$titulo">
   <meta property="og:description" content="$descripcion">
   <meta property="og:type" content="article">
+  <meta property="og:url" content="$base$archivo">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="$base`imagenes/tarjeta.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="$base`imagenes/tarjeta.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
