@@ -102,6 +102,20 @@ cp doc/word/media/*.png imagenes/
 
 ---
 
+## La tarjeta para compartir
+
+`imagenes/tarjeta.png` es la imagen de 1200×630 que muestran WhatsApp, Twitter, LinkedIn y el correo cuando alguien pega el link. Se dibuja por programa, no a mano:
+
+```bash
+powershell -File herramientas/tarjeta.ps1 -Salida imagenes/tarjeta.png
+```
+
+Si cambiás el título o las cifras, se edita ese archivo y se vuelve a correr. Usa Georgia y Consolas, que vienen con Windows, porque las tipografías del sitio se cargan de internet y no están instaladas en la máquina.
+
+Las etiquetas que apuntan a esa imagen (`og:image`, `twitter:card`) están en las seis páginas y usan direcciones absolutas: **si el sitio cambia de dirección, hay que actualizar la variable `$base` en `generar.ps1`** y las etiquetas escritas a mano en `index.html` e `informe.html`.
+
+---
+
 ## Estética
 
 Tipografías: **Crimson Pro** para el texto (serif, pensada para lectura larga) y **Space Mono** para fechas, códigos de pregunta y citas. Se cargan desde Google Fonts.
