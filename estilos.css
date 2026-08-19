@@ -413,6 +413,13 @@ mark { background: rgba(166, 90, 46, .22); color: inherit; padding: 0 2px; }
   font-family: var(--mono); font-size: 12px; font-weight: 700;
   color: var(--cobre); display: block;
 }
+/* en la cronología los hitos son enlaces: saltan al día correspondiente */
+.linea-tiempo .hitos a {
+  color: inherit; border-bottom: none; display: block;
+}
+.linea-tiempo .hitos a:visited { color: inherit; }
+.linea-tiempo .hitos a:hover { color: var(--tinta); }
+.linea-tiempo .hitos a:hover b { text-decoration: underline; }
 .linea-tiempo figcaption {
   margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--linea);
   font-family: var(--serif); font-style: italic; font-size: 16px;
